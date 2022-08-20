@@ -16,12 +16,22 @@
   </style>
 </head>
 
-<body>
+<body class="bg-light">
   <main class="mt-5">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+    <div class="container login">
+      <img src="img/login.png" alt="logo de e-commerce">
+      <h2 class="text-center">Inicio de sesión</h2>
+      <form class="text-center">
+        <div class="mb-3 text-center" id="divInEmail">
+          <label for="InputEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 text-center" id="divInPassword">
+          <label for="InputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="InputPassword">
+        </div>
+        <button type="submit" class="btn btn-primary" id="btnSubmit">Ingresar</button>
+      </form>
     </div>
   </main>
   <footer class="text-muted">

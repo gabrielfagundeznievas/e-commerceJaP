@@ -194,3 +194,13 @@ a.custom-card:hover {
   flex-wrap: wrap;
   gap: 10px;
 }
+
+.card_product{
+  text-decoration: none;
+  color:rgba(0, 0, 0);
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+}
