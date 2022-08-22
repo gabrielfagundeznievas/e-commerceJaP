@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(){
+    if(localStorage.getItem('redirect') == 0){
+        window.location = "login.html";
+    };
+
+    localStorage.setItem('redirect', 0);
+
     document.getElementById("autos").addEventListener("click", function() {
         localStorage.setItem("catID", 101);
         window.location = "products.html"
