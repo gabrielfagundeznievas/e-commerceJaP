@@ -51,6 +51,7 @@ function validation(){
                 }
 
                 localStorage.setItem('redirect', 1);
+                localStorage.setItem('user', inputEmail.value);
                 window.location = "index.html";
             };
         };
