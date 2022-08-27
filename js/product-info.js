@@ -1,5 +1,3 @@
-console.log(localStorage)
-
 async function showProducts() {
     try {
       const result = await fetch(PRODUCTS_URL + localStorage.catID + '.json');

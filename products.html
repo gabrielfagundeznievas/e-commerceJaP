@@ -30,7 +30,11 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="user"></a>
+            <ul class="dropdown-menu dropdown-menu-dark bg-dark dropdown-menu-end">
+              <li><a class="dropdown-item" href="#" id="logout">Cerrar Sesion</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -41,7 +45,42 @@
       <h2 class="subtitle text-center my-3">Productos</h2>
       <h3 class="text-center text-secondary mb-5">Verás aqui todos los productos de la categoria <span class="category text-dark" id="catName"></span></h3>
     </section>
-    <secction class="product container" id="product">
+    <section class="container">
+      <div class="row">
+        <div class="col text-start">
+          <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+            <input type="radio" class="btn-check" name="options" id="sortAsc">
+            <label class="btn btn-light" for="sortAsc">A-Z</label>
+            <input type="radio" class="btn-check" name="options" id="sortDesc">
+            <label class="btn btn-light" for="sortDesc">Z-A</label>
+            <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+            <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-1 container">
+          <div class="row container p-0 m-0">
+            <div class="col">
+              <p class="font-weight-normal text-start my-2">Precio</p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+            </div>
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <secction class="product container mt-2" id="product">
     </secction>
   </main>
   <footer class="text-muted">

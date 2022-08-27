@@ -1,11 +1,9 @@
-const catName = document.getElementById('catName');
-const sectionProduct = document.getElementById('product');
-
-
 async function showProducts() {
   try {
     const result = await fetch(PRODUCTS_URL + localStorage.catID + '.json');
     const data = await result.json();
+    const catName = document.getElementById('catName');
+    const sectionProduct = document.getElementById('product');
 
     catName.textContent = data.catName;
 
@@ -25,5 +23,21 @@ async function showProducts() {
   }
 }
 
+function login(){
+  const user = document.getElementById('user');
 
+  if(localStorage.getItem('redirect') == 1) user.textContent = localStorage.getItem('user');  
+}
+
+function logout(){
+  const logOut = document.getElementById('logout');
+
+  logOut.addEventListener('click', () => {
+      localStorage.removeItem('redirect');
+      window.location = "login.html"
+  })
+}
+
+login()
+logout()
 showProducts();
