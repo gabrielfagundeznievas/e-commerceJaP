@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const clearRangeFilter = document.getElementById("clearRangeFilter");
 
       const arrProducts = data.products;
+      // const arrProducts2 = data.products;
 
       catName.textContent = data.catName;
 
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sectionProduct.innerHTML = '';
         cardProducts()
+        arrProducts2 = arrProducts;
       })
 
       function cardProducts() {
