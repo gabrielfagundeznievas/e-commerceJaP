@@ -24,15 +24,6 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 
-    function logout(){
-        const logOut = document.getElementById('logout');
-
-        logOut.addEventListener('click', () => {
-            localStorage.removeItem('redirect');
-            window.location = "login.html"
-        })
-    }
-
     logout();
 });
 

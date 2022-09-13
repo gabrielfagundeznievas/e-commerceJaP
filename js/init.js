@@ -39,3 +39,19 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+function login() {
+  const user = document.getElementById("user");
+
+  if (localStorage.getItem("redirect") == 1)
+    user.textContent = localStorage.getItem("user");
+}
+
+function logout(){
+  const logOut = document.getElementById('logout');
+
+  logOut.addEventListener('click', () => {
+      localStorage.removeItem('redirect');
+      window.location = "login.html"
+  })
+}
