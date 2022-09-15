@@ -50,6 +50,20 @@ async function showComments() {
   try {
     const result = await fetch(PRODUCT_INFO_COMMENTS_URL + localStorage.catID + ".json");
     const data = await result.json();
+
+    const secCommenters = document.getElementById('secCommenters');
+    const promedioComentarios = document.getElementById('promedioComentarios');
+    
+    promedioComentarios.textContent = await title.textContent
+
+    let promedio = 0;
+    for(comentario of data){
+      promedio += comentario.score
+    }
+    promedio = promedio/data.length
+
+
+    console.log(promedio)    
     console.log(data);
   }catch(error){
     console.log(error)
